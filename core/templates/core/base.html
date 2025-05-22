@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi web Personal</title>
+    <title>{% block title %}{% endblock %} |Mi web Personal</title>
 </head>
 <body>
     <!--Cabecera y menú-->
     <h1>Mi web personal</h1>
     <ul>
-        <li><a href="/">Potrada</a></li>
-        <li><a href="/about">Acerca de</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="{% url 'home' %}">Potrada</a></li>
+        <li><a href="{% url 'about' %}">Acerca de</a></li>
+        <li><a href="{% url 'contacto' %}">Contacto</a></li>
     </ul>
     <!--Contenido-->
     {% block content %}
