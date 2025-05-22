@@ -1,8 +1,14 @@
 {% extends "core/base.html" %}
 {% block title %}Portada{% endblock %}
 
-{% block content %}
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}    
 
-<h2>Portada</h2>
-<p>Esto es la portada</p>
+
+{% block header %}
+<h1>Jehyner Puello</h1>
+<span class="subheading">Ingeniero Electronico y de telecominicaciones, desarrollador web con python, administrador 
+de sistemas informaticos y de redes</span>
+{% endblock %}
+
+{% block content %}
 {% endblock %}
