@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{% block title %}{% endblock %}Jehyner Puello</title>
+    <title>{% block title %}{% endblock %} | Jehyner Puello</title>
 
     <!-- Estilos y fuentes del template  -->
      {% load static %}
@@ -37,7 +37,7 @@
               <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portafolio</a>
+              <a class="nav-link" href="{% url 'porfolio' %}">Porfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
