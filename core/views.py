@@ -10,5 +10,3 @@ def about(request):
 def contacto(request):
     return render(request, "core/contacto.html")
 
-def porfolio(request):
-    return render(request, "core/porfolio.html")                        

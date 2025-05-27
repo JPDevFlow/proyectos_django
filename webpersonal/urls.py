@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as core_views
+from portfolio import views as portfolio_views
 
 from django.conf import settings
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('contacto/', views.contacto, name='contacto'),
+    path('', core_views.home, name='home'),
+    path('about/', core_views.about, name='about'),
+    path('contacto/', core_views.contacto, name='contacto'),
     path('admin/', admin.site.urls),
-    path('porfolio/', views.porfolio, name='porfolio'),
+    path('porfolio/', portfolio_views.porfolio, name='porfolio'),
 ]
 
 #Estas lineas de codigo permiten servir archivos estaticos y de medios durante el desarrollo, como imagenes, CSS y JavaScript.
