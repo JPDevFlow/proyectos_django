@@ -6,6 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")#Campo de texto con un maximo de 200 caracteres
     descripcion = models.TextField(verbose_name="Descripcion")#Campo de texto mas largo para la descripcion del proyecto
     image = models.ImageField(verbose_name="Imagen", upload_to='projects')#upload_to='projects' indica que las imagenes se guardaran en una carpeta llamada projects dentro de la carpeta media
+    link = models.URLField(verbose_name="Enlace", blank=True, null=True)#Campo para un enlace, puede ser vacio o nulo
     created =models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")#Cada se crea una instancia automaticamente se agrega la fecha y hora
     updated =models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")#Cada vez que se actualiza la instancia se agrega la fecha y hora
 
